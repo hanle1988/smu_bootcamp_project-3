@@ -7,9 +7,9 @@
 
 
   function t(i) {
-    return this instanceof t ? (this._canvas = i = typeof i === "string" ? document.getElementById(i) : i, this._ctx = i.getContext("2d"), this._width = i.width, this._height = i.height, this._max = 1, void this.clear()) : new t(i);
+    return this instanceof t ? (this._canvas = i = typeof i === "string" ? document.getElementById(i) : i, this._ctx = i.getContext("2d"), this._width = i.width, this._height = i.height, this._max = 5, void this.clear()) : new t(i);
   }t.prototype = { defaultRadius: 25,
-    defaultGradient: { 0.4: "blue", 0.6: "cyan", 0.7: "lime", 0.8: "yellow", 1: "red" },
+    defaultGradient: { 0.025: "blue", 0.05: "lime", 0.125: "yellow", 0.25: "red" },
     data: function(t, i) {
       return this._data = t, this;
     },
