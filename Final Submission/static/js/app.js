@@ -1,38 +1,28 @@
 var filterBoolean = false;
 $(document).ready(function () {
   // init map
-  
-  debugger;
   doWork();
-  
-  console.log(filterBoolean)
   // button click
   
   $("#filterButton").on("click", function () {
-    debugger;
     filterBoolean = true;
-    console.log(filterBoolean)
     doWork();
   });
 
 });
 
 function doWork() {
-  debugger;
   // Store our API endpoint as queryUrl.
   let queryUrl = `crime_location.json`;
-  console.log(filterBoolean)
   // reset map container
   $("#mapContainer").empty();
   $("#mapContainer").append("<div id='map'></div>")
 
   // Perform a GET request to the query URL.
   d3.json(queryUrl).then(function (data) {
-    debugger
     if (filterBoolean) {
       data = filterData(document.getElementById("hloffer").value,document.getElementById("locale").value, data);
     }
-    console.log(data)
     let coordinates = data.map(x => [x.latitude, x.longitude])
     // Using the features array sent back in the API data, create a GeoJSON layer, and add it to the map.
     makeMap(coordinates);
@@ -41,8 +31,6 @@ function doWork() {
 }
 
 function filterData(crime_type, district, data){
-  debugger
-  console.log("made it")
   let filteredData = []
   data.forEach(function(crime) {
     if(crime.primary_type == crime_type && crime.district == district) {
