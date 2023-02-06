@@ -8,18 +8,21 @@
 
     <title>Crimes in Chicago</title>
 
-   
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://bootswatch.com/5/litera/_bootswatch.scss" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css"/>
    
     <link rel="stylesheet" href="https://bootswatch.com/5/litera/bootstrap.min.css">
-   
+
+    <!-- Our own CSS stylesheet -->
+    <link rel="stylesheet" href="#" media="screen">
+    <script src="static/js/barchart.js"></script>
+
   </head>
   <body>
     <!--Placeholder for navbar-->
@@ -33,7 +36,8 @@
           <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html">Home
+              </a>
               </li>
   
               <li class="nav-item">
@@ -41,7 +45,7 @@
               </li>
   
               <li class="nav-item">
-              <a class="nav-link" href="plotlybarchart.html">By City District</a>
+              <a class="nav-link active" href="plotlybarchart.html">By City District</a>
               </li>
   
               <li class="nav-item">
@@ -67,28 +71,29 @@
           </div>
       </div>
     </nav>
-    <h1>Works Cited</h1>
+    <!--Outer Container-->
+    <div class="container-fluid" style="margin-top: 25px;">
+        <div class="row">
+          <div class = "col-md-12">
+            <div class="card border-info mb-3">
+              <div class="card-header"><h1>Plotly Bar Chart</h1></div>
+              <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p><em>With our sample of data, here are the five most common crimes in the five most affected districts.</em></p>
+                    </div>              
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
 
-    <div class=“container”>
-    
-        <div class="card border-secondary mb-12" style="max-width: 100rem;">
-        <div class="card-body">
-          <h4 class="card-title">Kaggle Dataset</h4>
-          <p class="card-text">https://www.kaggle.com/datasets/elijahtoumoua/chicago-analysis-of-crime-data-dashboard</p>
-        </div>         
-        <div class="card border-secondary mb-12" style="max-width: 100rem;">
-           
-            <div class="card-body">
-              <h4 class="card-title">Chicago Data Portal</h4>
-              <p class="card-text">https://data.cityofchicago.org/Public-Safety/Crimes-2001-to-Present/ijzp-q8t2.</p>
-            </div> 
-        </div>
-        </div>
-    </div>
-         
-              
-  
-    
-</body>
-
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </body>
 </html>
